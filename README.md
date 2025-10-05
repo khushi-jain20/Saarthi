@@ -7,7 +7,6 @@ This project was created as a learning experience to understand full-stack devel
 
 ---
 
-
 ## 🌟 Features
 
 
@@ -31,25 +30,23 @@ This project was created as a learning experience to understand full-stack devel
 
 ## 🏗️ Project Structure
 
+
 saarthi/
 ├── backend/
-│ ├── config/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── server.js
-│ └── package.json
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── hooks/
-│ │ ├── context/
-│ │ └── App.jsx
-│ ├── index.html
-│ ├── tailwind.config.js
-│ └── package.json
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── hooks/
+│       ├── context/
+│       └── App.jsx
 ├── .gitignore
 ├── README.md
 └── .env.example
@@ -57,8 +54,7 @@ saarthi/
 
 ---
 
-
-## Tech Stack
+## 💻 Tech Stack
 
 
 ### Backend
@@ -88,8 +84,15 @@ saarthi/
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
+### Prerequisites
+
+-   Node.js (v18.x or higher)
+
+-   npm
+
+-   MongoDB (local or Atlas)
 
 ### Backend Setup
 ```bash
@@ -100,7 +103,6 @@ npm install
 
 npm run dev
 ```
-
 
 ### Frontend Setup
 ```bash
@@ -117,16 +119,13 @@ This will start the React frontend on the default Vite port (usually 5173).
 
 ## API Integration
 
-
 The frontend communicates with the backend through a RESTful API and real-time Socket.io events.
 
 ### Base URL:
 
 Development → http://localhost:4000
 
-
-### Endpoints
-
+### Endpoints:
 
 -POST /api/auth/login – User/Captain login
 
@@ -136,7 +135,6 @@ Development → http://localhost:4000
 
 
 ### Real-time Events (Socket.io)
-
 
 -ride:request – emitted by user, received by captains nearby
 
@@ -151,29 +149,28 @@ Full endpoint list is available in the routes/ folder of the backend.
 ## Development Workflow
 
 
--User logs in and selects pickup & destination.
 
--System suggests vehicle options (Auto / Bike / Car) and shows estimated fare.
+-   User logs in and selects pickup & destination.
 
--User requests a ride → backend emits request to nearby captains via Socket.io.
+-   System suggests vehicle options (Auto / Bike / Car) and shows estimated fare.
 
--Captain accepts → user receives driver details and an OTP.
+-   User requests a ride → backend emits request to nearby captains via Socket.io.
 
--Captain confirms OTP on pickup → ride starts.
+-   Captain accepts → user receives driver details and an OTP.
 
--Both parties see live updates; user rates the ride after completion.
+-   Captain confirms OTP on pickup → ride starts.
 
+-   Both parties see live updates; user rates the ride after completion.
 
 
 ## Environment Configuration
-
 
 All sensitive credentials are stored in .env files (excluded from version control).
 A .env.example file is provided in the repository to indicate the required variables for both frontend and backend environments.
 
 
-
 ### Example: Backend (.env.example)
+
 MONGO_URI=mongodb_connection_string
 
 JWT_SECRET=jwt_secret
@@ -194,12 +191,13 @@ VITE_API_PREFIX=/api/v1
 
 ## Planned Improvements
 
--Complete user-side map integration and live tracking.
+-   Complete user-side map integration and live tracking.
 
--Add fare estimation & surge pricing.
+-   Add fare estimation & surge pricing.
 
--Implement payment gateway (Stripe) and trip receipts.
+-   Implement payment gateway (Stripe) and trip receipts.
 
--Add trip history, analytics dashboard for captains, and better error handling.
+-   Add trip history and an analytics dashboard for captains.
 
+-   Improve global state management and error handling.
 
